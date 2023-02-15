@@ -59,10 +59,10 @@ void input_array(int **array, int n)
 
         if ((i == r_min + 1) && (j == c_min) && (c_min != n - c_max - 1))
         {
-            ++r_min;
-            ++r_max;
-            ++c_min;
-            ++c_max;
+            r_min++;
+            r_max++;
+            c_min++;
+            c_max++;
         }
         value++;
     }
