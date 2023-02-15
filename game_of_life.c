@@ -23,8 +23,8 @@ int main() {
 
 void game_of_life(int matrix[][WIDTH], int temp[][WIDTH]) {
     int delay = 250000;
-    char quit = '1';
-    while (check_matrix(matrix) && quit == '1') {
+    char quit = '0';
+    while (check_matrix(matrix) && quit == '0') {
         initscr();
         cell_cycle(matrix, temp);
         print_matrix(matrix);
@@ -37,7 +37,7 @@ void game_of_life(int matrix[][WIDTH], int temp[][WIDTH]) {
             if (delay > 50000) delay -= 50000;
         if (input == 'z')
             if (delay < 2e+6) delay += 50000;
-        if (input == 'q') quit = '0';
+        if (input == 'q') quit = '1';
         usleep(delay);
         endwin();
         fclose(f);
